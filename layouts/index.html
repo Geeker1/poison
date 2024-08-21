@@ -1,4 +1,9 @@
 {{ define "main" -}}
+<!-- <div class="info">
+    <a>ML & Data Science</a>
+    <a>Algo Trading</a>
+    <a>General</a>
+</div> -->
 <div class="posts">
     {{ $frontPageTypes := default (slice "posts") .Site.Params.front_page_content }}
     {{ range (.Paginate (where .Site.RegularPages "Type" "in" $frontPageTypes)).Pages }}

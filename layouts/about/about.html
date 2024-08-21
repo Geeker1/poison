@@ -8,10 +8,12 @@
             {{ range .Pages }}
                 <h1 class="post-title">{{ .Title }}</h1>
                 {{ .Content }}
+                {{ partial "socials.html" . }}
             {{ end }}
         {{ else }}
             <h1 class="post-title">{{ .Title }}</h1>
             {{ .Content }}
+            {{ partial "socials.html" . }}
         {{ end }}
     {{ end }}
     {{ if (.Site.Params.listmonk) }}
